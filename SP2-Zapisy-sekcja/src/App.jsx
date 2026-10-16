@@ -31,9 +31,39 @@ return (
         ))}
       </ol>
 
+      <form onSubmit={zapiszFormularz}>
+        <div className="mb-3">
+          <label htmlFor="imieNazwisko" className="form-label">
+            Imię i nazwisko:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="imieNazwisko"
+            value={imieNazwisko}
+            onChange={(event) => setImieNazwisko(event.target.value)}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="numerSekcji" className="form-label">
+            Numer sekcji:
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            id="numerSekcji"
+            value={numerSekcji}
+            onChange={(event) => setNumerSekcji(event.target.value)}
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary">
+          Zapisz
+        </button>
+      </form>
     </div>
   );
-
 }
 
 
